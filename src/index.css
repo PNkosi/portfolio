@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .p-container {
+        @apply container;
+        @apply mx-auto;
+        @apply lg:max-w-[80%];
+        @apply px-6;
+    }
+
+    .section-title {
+        @apply text-3xl;
+        @apply border-l-orange border-l-4;
+        @apply pl-2 my-4
+    }
+
+    .hover-border-rounded {
+        @apply hover:border-orange hover:border-2 hover:rounded-[50%] p-2 hover:text-orange;
+    }
+}
