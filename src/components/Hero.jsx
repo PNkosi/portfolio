@@ -3,7 +3,7 @@ import Typed from 'react-typed'
 
 const Hero = () => {
   return (
-    <section className="flex flex-col justify-center p-container h-[70vh] text-slate-700">
+    <section className="flex flex-col justify-center p-container h-[100vh] text-slate-700">
         
 
         <h2 className="text-4xl">Hello👋, Welcome!</h2>

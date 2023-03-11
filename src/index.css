@@ -6,8 +6,8 @@
     .p-container {
         @apply container;
         @apply mx-auto;
-        @apply lg:max-w-[80%];
-        @apply px-6;
+        @apply lg:max-w-[1336px];
+        @apply px-6 lg:px-24;
     }
 
     .section-title {

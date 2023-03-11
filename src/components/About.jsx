@@ -11,8 +11,8 @@ import SocialLinks from './SocialLinks'
 
 const About = () => {
   return (
-    <section className='py-12 text-slate-700' id='skills'>
-      <div className='p-container grid md:grid-cols-2 gap-12'>
+    <section className='pb-12 text-slate-700' id='skills'>
+      <div className='p-container grid lg:grid-cols-2 gap-12'>
         <div className='flex flex-col justify-center items-center'>
           <img className='md:order-last' src={illustration} alt='' />
           <SocialLinks className='mt-6' />

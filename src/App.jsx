@@ -1,21 +1,33 @@
-import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Home from './layouts/Home'
-import Blog from './layouts/Blog'
+// NPM Packages
+import {
+    createBrowserRouter, Route,
+    createRoutesFromElements, RouterProvider
+} from 'react-router-dom'
 
-import Footer from './components/Footer'
+// Pages
+import { Home ,ClientProjects, PersonalProjects, } from './pages'
+
+
+// Layouts
+import { ProjectsLayout, RootLayout } from './layouts'
+
+
+
+const router = createBrowserRouter(
+    createRoutesFromElements(
+        <Route to='/' element={<RootLayout />}>
+            <Route index element={<Home />} />
+            <Route path='/' element={<ProjectsLayout />}>
+                <Route path='/personal-projects' element={<PersonalProjects />} />
+                <Route path="/freelance-projects" element={<ClientProjects />} />  
+            </Route>
+        </Route>
+    )
+)
 const App = () => {
-  return (
-    <>
-      <Navbar />
-      <div className='pt-[10vh]'>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/blog' element={<Blog />} />
-        </Routes>
-      </div>
-    </>
-  )
+    return (
+        <RouterProvider router={router} />
+    )
 }
 
 export default App

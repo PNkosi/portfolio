@@ -15,6 +15,11 @@ const Navbar = () => {
     menu.classList.add('hidden')
   }
 
+  const activeNavLink = {
+    color: 'red',
+    borderBottom: '1px solid red'
+  }
+
   return (
     <header className='bg-white fixed w-full z-50'>
       <nav className='relative h-[10vh] p-container flex justify-between items-center'>

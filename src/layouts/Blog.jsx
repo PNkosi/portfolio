@@ -7,7 +7,11 @@ const Blog = () => {
   return (
     <>
       <header className='relative h-[60vh] bg-slate-900 overflow-hidden'>
-        <img className='absolute right-0 top-[-30%] z-[0]' src={hive} alt='' />
+        <img
+          className='absolute right-0 top-[-375px] md:top-[-30%] z-[0]'
+          src={hive}
+          alt=''
+        />
         <div className='p-container flex flex-col justify-center h-full '>
           <h1 className='text-white text-6xl font-bold z-10'>
             My <span className='text-orange'>Blog</span>
@@ -18,7 +22,7 @@ const Blog = () => {
             <span>improvement</span>
           </p>
 
-          <p className='hidden md:block text-slate-500 text-right z-10'>
+          <p className='hidden md:block text-slate-500 z-10'>
             <i>
               "A journey of a thousand miles begin with one step" -{' '}
               <span className='text-orange'>Author</span>
