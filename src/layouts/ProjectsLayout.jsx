@@ -1,20 +1,22 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { Projects } from '../components'
 
-const Projects = () => {
+import img from '../assets/cool-pc.jpg'
+
+
+const ProjectsLayout = () => {
+  const headerBackground = {
+    background: `linear-gradient(to bottom, #8b41fb, #8b41fb0b),url(${img}) center/cover no-repeat`
+  }
   return (
-    <section className='text-slate-700 bg-slate-50 py-12'>
-        <div className="p-container flex justify-between items-center">
-            <h2 className="section-title"><span className='text-orange'>Projects</span> I worked on</h2>
-
-            <div className='grid grid-flow-col gap-x-24 border-slate-200 border-b-2 mb-8 w-fit'>
-                <NavLink to='/personal-projects' className='hover:border-b-2 hover:border-orange hover:text-orange py-4'>Personal Projects</NavLink>
-                <NavLink to='/freelance-projects' className='hover:border-b-2 hover:border-orange hover:text-orange py-4'>Freelance Projects</NavLink>
-            </div>
-        </div>
-
-        <Outlet />
-    </section>
+    <>
+      <header style={headerBackground} className='pt-[10vh] h-[50vh] flex justify-center items-center'>
+        <h1 className="text-3xl text-white font-bold" >My Recent Projects</h1>
+      </header>
+      <section className='text-slate-700 bg-slate-50'>
+        <Projects />
+      </section>
+    </>
   )
 }
 
-export default Projects
+export default ProjectsLayout

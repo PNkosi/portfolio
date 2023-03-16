@@ -1,6 +1,10 @@
 import { Outlet } from 'react-router-dom'
 
-import { Navbar, Footer } from "../components";
+import { Navbar } from "../components";
+
+import wave from '../assets/SVG/wave.svg'
+
+
 
 const RootLayout = () => {
     return (
@@ -11,7 +15,7 @@ const RootLayout = () => {
                 <Outlet />
             </main>
 
-            {/* <Footer /> */}
+            <img src={wave} alt="" />
         </>
     )
 }

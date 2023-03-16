@@ -1,84 +1,40 @@
+import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from '../assets/SVG/logo.svg'
-import { TbMenu } from 'react-icons/tb'
+import { TbMenu, IoClose } from 'react-icons/all'
 
 const Navbar = () => {
+
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
   const toggleMenu = () => {
-    document.querySelector('body').style.background = 'rgba(255,255,255, 1)'
-    const menu = document.getElementById('mobileMenu')
+    setIsMenuOpen(!isMenuOpen)
 
-    menu.classList.toggle('hidden')
-  }
-
-  const hideMenu = () => {
-    const menu = document.getElementById('mobileMenu')
-    menu.classList.add('hidden')
-  }
-
-  const activeNavLink = {
-    color: 'red',
-    borderBottom: '1px solid red'
   }
 
   return (
     <header className='bg-white fixed w-full z-50'>
+      {isMenuOpen && <div onClick={toggleMenu} className="absolute bg-black bg-opacity-80 h-screen w-screen"></div>}
       <nav className='relative h-[10vh] p-container flex justify-between items-center'>
         <NavLink to='/'>
           <img className='' width={30} src={logo} alt='logo' />
         </NavLink>
 
-        {/* Menu for Mobile */}
-        <ul
-          id='mobileMenu'
-          className='animate-scale-up-center hidden md:hidden absolute top-[15vh] left-[50%] translate-x-[-50%] bg-orange p-6 rounded-lg text-slate-100 flex flex-col w-3/5 text-center'>
-          <li className='my-4'>
-            <NavLink onClick={hideMenu} to='/'>
-              Home
-            </NavLink>
-          </li>
-          <li className='my-4'>
-            <a onClick={hideMenu} href='#skills'>
-              Skills
-            </a>
-          </li>
-          <li className='my-4'>
-            <a onClick={hideMenu} href='#projects'>
-              Projects
-            </a>
-          </li>
-          <li className='my-4'>
-            <NavLink onClick={hideMenu} to='/blog'>
-              Blog
-            </NavLink>
-          </li>
-          <li className='my-4'>
-            <a onClick={hideMenu} href='#contact'>
-              Contact Me
-            </a>
-          </li>
-        </ul>
+        {isMenuOpen &&
+          <ul
+            id='mobileMenu'
+            className="animate-scale-up-center absolute top-[15vh] left-[50%] translate-x-[-50%] bg-orange p-6 rounded-lg text-slate-100 flex flex-col w-3/5 text-center font-bold">
+            <MenuLinks onMenuToggle={toggleMenu} />
+          </ul>}
 
         {/* Menu for tablet, desktop and larger screens */}
-        <ul className='hidden md:flex text-slate-500'>
-          <li className='mx-4'>
-            <NavLink to='/'>Home</NavLink>
-          </li>
-          <li className='mx-4'>
-            <a href='#skills'>Skills</a>
-          </li>
-          <li className='mx-4'>
-            <a href='#projects'>Projects</a>
-          </li>
-          <li className='mx-4'>
-            <NavLink to='/blog'>Blog</NavLink>
-          </li>
-          <li className='mx-4'>
-            <a href='#contact'>Contact Me</a>
-          </li>
+        <ul className='hidden md:flex text-slate-500 font-bold'>
+          <MenuLinks />
         </ul>
 
         <TbMenu
-          className='md:hidden'
+          className='md:hidden cursor-pointer'
           size={30}
           color='#f9a11e'
           onClick={toggleMenu}
@@ -86,6 +42,25 @@ const Navbar = () => {
       </nav>
     </header>
   )
+}
+
+function MenuLinks(props) {
+  const linksData = [
+    { name: 'Home', to: '/' },
+    { name: 'My Work', to: 'projects' },
+    { name: 'Blog', to: 'blog' },
+    { name: 'contact', to: '#contact' }
+  ]
+
+  const links = linksData.map(({ name, to }, index) => (
+    <li className='mx-8 my-4 lg:my-0' key={index} onClick={props.onMenuToggle}>
+      <NavLink to={to}>{name}</NavLink>
+    </li>
+  ))
+
+  return <>
+    {links}
+  </>
 }
 
 export default Navbar

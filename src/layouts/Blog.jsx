@@ -1,78 +1,63 @@
-import hive from '../assets/SVG/hive.svg'
-import wave from '../assets/SVG/wave.svg'
-import BlogPostCard from '../components/BlogPostCard'
-import { SiTwitter, SiLinkedin, SiGithub } from 'react-icons/si'
+import { useState } from 'react'
+
+import data from '../assets/data.json'
+
+import { AllBlogs, DevBlogs, DesignBlogs, BlogHeader, BlogSidebar } from '../components'
 
 const Blog = () => {
+  const active = {
+    color: "#f9a11e",
+    borderBottom: "2px solid #f9a11e",
+    fontWeight: 'bold'
+  }
+
+  const [activeLink, setActiveLink] = useState(0)
+  const [postsTitle, setPostsTitle] = useState('All')
+
+  const categories = data.blogCategories.map((category, index) => (
+    <button style={activeLink === index ? active : {}} key={index} onClick={() => {
+      setActiveLink(index)
+      setPostsTitle(category)
+    }}>
+      {category}
+    </button>
+  ))
+
+  const getPosts = () => {
+    if (activeLink === 0) {
+      return <AllBlogs />
+    }
+    else if (activeLink === 1) {
+      return <DevBlogs />
+
+    }
+    else if (activeLink === 2) {
+      return <DesignBlogs />
+    }
+  }
+
   return (
     <>
-      <header className='relative h-[60vh] bg-slate-900 overflow-hidden'>
-        <img
-          className='absolute right-0 top-[-375px] md:top-[-30%] z-[0]'
-          src={hive}
-          alt=''
-        />
-        <div className='p-container flex flex-col justify-center h-full '>
-          <h1 className='text-white text-6xl font-bold z-10'>
-            My <span className='text-orange'>Blog</span>
-          </h1>
-          <p className='text-slate-300 my-4 z-10'>
-            Practice makes{' '}
-            <span className='line-through text-slate-500'>perfect</span>{' '}
-            <span>improvement</span>
-          </p>
+      <div className='p-container'>
+        <div className="grid grid-cols-4 gap-2">
+          <BlogHeader />
+          <BlogSidebar />
+        </div>
 
-          <p className='hidden md:block text-slate-500 z-10'>
-            <i>
-              "A journey of a thousand miles begin with one step" -{' '}
-              <span className='text-orange'>Author</span>
-            </i>
-          </p>
+        <section className='mt-4'>
 
-          <h2 className='text-white mt-4 z-10'>Let's connect</h2>
-          <div className=' flex justify-between w-32 md:relative'>
-            <a
-              className='z-10 text-slate-300 hover-border-rounded p-2 border-2 border-transparent'
-              href='#'>
-              <SiGithub />
-            </a>
-            <a
-              className='z-10 text-slate-300 hover-border-rounded p-2 border-2 border-transparent'
-              href='#'>
-              <SiTwitter />
-            </a>
-            <a
-              className='z-10 text-slate-300 hover-border-rounded p-2 border-2 border-transparent'
-              href='#'>
-              <SiLinkedin />
-            </a>
+
+          <div className='grid grid-flow-col gap-x-24 border-slate-200 border-b-2 w-fit my-6'>
+            {categories}
           </div>
-        </div>
-      </header>
 
-      <section className='p-container'>
-        <h2 className='section-title'>Blog Posts</h2>
+          <h2 className='section-title my-6'>{postsTitle} Blog Posts</h2>
 
-        <div className='grid grid-flow-col gap-x-6 border-slate-200 border-b-2 mb-8'>
-          <button className='hover:bg-slate-900 hover:text-orange py-4'>
-            All
-          </button>
-          <button className='hover:bg-slate-900 hover:text-orange py-4'>
-            Development
-          </button>
-          <button className='hover:bg-slate-900 hover:text-orange py-4'>
-            Design
-          </button>
-        </div>
-
-        <div className='grid md:grid-cols-3 gap-6'>
-          <BlogPostCard />
-          <BlogPostCard />
-          <BlogPostCard />
-          <BlogPostCard />
-        </div>
-      </section>
-      <img src={wave} alt='' />
+          <div>
+            {getPosts()}
+          </div>
+        </section>
+      </div>
     </>
   )
 }

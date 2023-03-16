@@ -11,7 +11,7 @@ import SocialLinks from './SocialLinks'
 
 const About = () => {
   return (
-    <section className='pb-12 text-slate-700' id='skills'>
+    <section className='pb-12 text-slate-700' id='about'>
       <div className='p-container grid lg:grid-cols-2 gap-12'>
         <div className='flex flex-col justify-center items-center'>
           <img className='md:order-last' src={illustration} alt='' />
@@ -27,7 +27,7 @@ const About = () => {
             Hi there! I'm Perfect Nkosi, a front-end web developer. My passion
             for coding and creating digital solutions has led me to build
             beautiful and functional websites and web applications. I have a{' '}
-            <NavLink className='text-orange font-bold' to='/blog'>
+            <NavLink className='text-orange font-bold animate-bounce' to='/blog'>
               blog
             </NavLink>{' '}
             where write about my journey as a developer and share with the

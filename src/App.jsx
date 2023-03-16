@@ -5,11 +5,11 @@ import {
 } from 'react-router-dom'
 
 // Pages
-import { Home ,ClientProjects, PersonalProjects, } from './pages'
+import { Home } from './pages'
 
 
 // Layouts
-import { ProjectsLayout, RootLayout } from './layouts'
+import { BlogLayout, ProjectsLayout, RootLayout } from './layouts'
 
 
 
@@ -17,9 +17,13 @@ const router = createBrowserRouter(
     createRoutesFromElements(
         <Route to='/' element={<RootLayout />}>
             <Route index element={<Home />} />
-            <Route path='/' element={<ProjectsLayout />}>
-                <Route path='/personal-projects' element={<PersonalProjects />} />
-                <Route path="/freelance-projects" element={<ClientProjects />} />  
+
+            <Route path='projects' element={<ProjectsLayout />}>
+
+            </Route>
+
+            <Route path='blog' element={<BlogLayout />}>
+
             </Route>
         </Route>
     )

@@ -3,20 +3,36 @@
 @tailwind utilities;
 
 @layer utilities {
-    .p-container {
-        @apply container;
-        @apply mx-auto;
-        @apply lg:max-w-[1336px];
-        @apply px-6 lg:px-24;
-    }
+  html {
+    scroll-behavior: smooth;
+  }
 
-    .section-title {
-        @apply text-3xl;
-        @apply border-l-orange border-l-4;
-        @apply pl-2 my-4
-    }
+  .orange {
+    @apply bg-orange text-white;
+  }
 
-    .hover-border-rounded {
-        @apply hover:border-orange hover:border-2 hover:rounded-[50%] p-2 hover:text-orange;
-    }
+  .dark {
+    @apply bg-slate-900 text-white;
+  }
+
+  .purple {
+    @apply bg-purple text-white;
+  }
+
+  .p-container {
+    @apply container;
+    @apply mx-auto;
+    @apply lg:max-w-[1336px];
+    @apply px-6 lg:px-24;
+  }
+
+  .section-title {
+    @apply text-3xl;
+    @apply border-l-orange border-l-4;
+    @apply pl-2 my-4;
+  }
+
+  .hover-border-rounded {
+    @apply hover:border-orange hover:border-2 hover:rounded-[50%] p-2 hover:text-orange;
+  }
 }

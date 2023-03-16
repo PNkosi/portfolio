@@ -1,0 +1,50 @@
+{
+    "blogCategories": [
+        "All",
+        "Dev",
+        "Design"
+    ],
+    "projectCategories": [
+        "Personal",
+        "Freelance",
+        "Colaborations"
+    ],
+    "projects": [
+        {
+            "previewImgUrl": "",
+            "title": "Edu Groud",
+            "type": "personal",
+            "sourceLink": "https://github.com/PNkosi",
+            "liveLink": "https://eduground.co.za"
+        },
+        {
+            "previewImgUrl": "",
+            "title": "The Evolution Of Learning",
+            "type": "freelance",
+            "liveLink": "https://teol.co.za"
+        },
+        {
+            "previewImgUrl": "",
+            "title": "The_Souvenir_Co",
+            "type": "freelance",
+            "liveLink": "https://thesouvenirco.co.za"
+        },
+        {
+            "previewImgUrl": "",
+            "title": "Clothing Ecommerce Web App",
+            "type": "collaboration",
+            "liveLink": "https://example.co.za"
+        }
+    ],
+    "sidebarBlogArticles": [
+        {
+            "title": "Particle System in Vannila Js"
+        },
+        {
+            "title": "Multiplayer FizzBuzz Game"
+        },
+        {
+            "title": "Quiz Me Up!"
+        }
+    ]
+}
