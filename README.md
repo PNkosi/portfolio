@@ -1,15 +1,16 @@
 ![]('../../src/assets/SVG/waveBottom.svg)
 ![Logo]('../../src/assets/hive.svg)
-# Perfect Nkosi - Portfolio
-## ***Feel free to use, and change the code. Go nuts! 😎***
+# Perfect Nkosi - Portfolio Website
+### ***Feel free to use, and change the code. Go nuts! 😎***
 
-simply 
-``` 
-    run 'yarn' to install dependencies
-    run 'yarn dev' to view the website
+Run the following commands to install dependencies and to start dev server
+``` bash
+    yarn
+    #
+    yarn dev --host
 ```
 
-## Tools used:
+### Tools used:
 - React Js
 - Tailwindcss
 - Sanity for content management
@@ -24,17 +25,6 @@ The illustration in the about section is from
 ---
 
 ### Last Modified:
-- 10 Feb 2023
+- 21 March 2023
 
 ![]('../../src/assets/SVG/wave.svg)
-
-
-
-
-
-
-
-
-
-
-

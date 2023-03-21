@@ -15,9 +15,9 @@ const Navbar = () => {
 
   return (
     <header className='bg-white fixed w-full z-50'>
-      {isMenuOpen && <div onClick={toggleMenu} className="absolute bg-black bg-opacity-80 h-screen w-screen"></div>}
+      {isMenuOpen && <div onClick={toggleMenu} className="absolute bg-black bg-opacity-80 h-screen w-screen mt-[10vh]"></div>}
       <nav className='relative h-[10vh] p-container flex justify-between items-center'>
-        <NavLink to='/'>
+        <NavLink onClick={isMenuOpen && toggleMenu} to='/'>
           <img className='' width={30} src={logo} alt='logo' />
         </NavLink>
 
@@ -49,7 +49,7 @@ function MenuLinks(props) {
     { name: 'Home', to: '/' },
     { name: 'My Work', to: 'projects' },
     { name: 'Blog', to: 'blog' },
-    { name: 'contact', to: '#contact' }
+    { name: 'contact', to: 'contact' }
   ]
 
   const links = linksData.map(({ name, to }, index) => (

@@ -1,18 +1,17 @@
 {
     "blogCategories": [
-        "All",
         "Dev",
         "Design"
     ],
     "projectCategories": [
         "Personal",
         "Freelance",
-        "Colaborations"
+        "Collaborations"
     ],
     "projects": [
         {
             "previewImgUrl": "",
-            "title": "Edu Groud",
+            "title": "Edu Ground",
             "type": "personal",
             "sourceLink": "https://github.com/PNkosi",
             "liveLink": "https://eduground.co.za"
@@ -38,7 +37,7 @@
     ],
     "sidebarBlogArticles": [
         {
-            "title": "Particle System in Vannila Js"
+            "title": "Particle System in Vanilla Js"
         },
         {
             "title": "Multiplayer FizzBuzz Game"

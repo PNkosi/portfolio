@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom'
 
 // Pages
-import { Home } from './pages'
+import { Home, ContactPage } from './pages'
 
 
 // Layouts
@@ -19,11 +19,11 @@ const router = createBrowserRouter(
             <Route index element={<Home />} />
 
             <Route path='projects' element={<ProjectsLayout />}>
-
             </Route>
 
-            <Route path='blog' element={<BlogLayout />}>
+            <Route path="contact" element={<ContactPage />} />
 
+            <Route path='blog' element={<BlogLayout />}>
             </Route>
         </Route>
     )

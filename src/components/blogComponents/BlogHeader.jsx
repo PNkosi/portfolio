@@ -12,7 +12,7 @@ const BlogHeader = () => {
 
     return (
         <div className='col-span-4 lg:col-span-3'>
-            <header style={headerBackground} className='relative h-[400px] overflow-hidden pt-[10vh]'>
+            <header style={headerBackground} className='relative h-[400px] overflow-hidden'>
                 <img className='opacity-30 md:opacity-100 absolute right-0 top-[-375px] md:top-[-30%] z-[0]' src={hive} alt='' />
                 <div className='p-container flex flex-col justify-center h-full '>
                     <h1 className='text-white text-6xl font-bold z-10'>

@@ -8,7 +8,7 @@ const BlogSidebar = () => {
     })
 
     return (
-        <aside className='lg:block lg:pt-[10vh] col-span-4 lg:col-span-1 bg-slate-900 text-white'>
+        <aside className='lg:block col-span-4 lg:col-span-1 bg-slate-900 text-white'>
             <div className="p-4">
                 <h1 className="text-4xl">Have Some <span className='text-orange'>Fun!</span></h1>
 

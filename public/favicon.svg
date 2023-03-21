@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="294.862" height="319" viewBox="0 0 294.862 319">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff8900"/>
+      <stop offset="1" stop-color="#8b41fb"/>
+    </linearGradient>
+  </defs>
+  <g id="favicon" transform="translate(0 0)">
+    <g id="Layer_2-2" transform="translate(56.461)">
+      <text id="P" transform="translate(-0.461 262)" fill="#f7931e" font-size="263" font-family="LIBRARY3AMsoft, 'LIBRARY \33  AM soft'" letter-spacing="-0.02em"><tspan x="0" y="0">P</tspan></text>
+    </g>
+    <path id="Path_369" data-name="Path 369" d="M278.076,277.068H130.616l-73.7-127.7,73.7-127.706h147.46l73.7,127.706ZM135.336,268.9h138.02l68.981-119.533L273.356,29.833H135.336L66.354,149.366Z" transform="translate(-56.915 10.19)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>
