@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import logo from '../assets/SVG/logo.svg'
+import logo from '../assets/SVG/hive-logo.svg'
 import { TbMenu, IoClose } from 'react-icons/all'
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
       {isMenuOpen && <div onClick={toggleMenu} className="absolute bg-black bg-opacity-80 h-screen w-screen mt-[10vh]"></div>}
       <nav className='relative h-[10vh] p-container flex justify-between items-center'>
         <NavLink onClick={isMenuOpen && toggleMenu} to='/'>
-          <img className='' width={30} src={logo} alt='logo' />
+          <img className='' width={50} src={logo} alt='logo' />
         </NavLink>
 
         {isMenuOpen &&
@@ -53,8 +53,12 @@ function MenuLinks(props) {
   ]
 
   const links = linksData.map(({ name, to }, index) => (
-    <li className='mx-8 my-4 lg:my-0' key={index} onClick={props.onMenuToggle}>
-      <NavLink to={to}>{name}</NavLink>
+    <li className='mx-8 my-4 lg:my-0 lg:hover:gradient-text transition-all' key={index} onClick={props.onMenuToggle}>
+      <NavLink style={({ isActive }) => {
+        return {
+          borderBottom: isActive ? '3px solid orange' : '',
+        }
+      }} to={to}>{name}</NavLink>
     </li>
   ))
 

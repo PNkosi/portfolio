@@ -9,7 +9,7 @@ const Contact = () => {
                     <h2 className="section-title">Get in touch with me</h2>
                     <ContactForm theme="dark" />
                 </div>
-                <img className="w-1/3 animate-pulse" src={logoHive} alt="" />
+                <img className="w-1/3" src={logoHive} alt="" />
             </div>
         </section>
     )
