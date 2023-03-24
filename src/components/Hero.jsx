@@ -4,7 +4,7 @@ import Button from './Button'
 
 const Hero = () => {
   return (
-    <section className="flex flex-col justify-center p-container md:py-8 h-[70vh] lg:h-screen text-slate-700">
+    <section className="flex flex-col justify-center p-container md:py-[15vh] h-[70vh] lg:h-screen text-slate-700">
       <h2 className="text-4xl">Hello👋, Welcome!</h2>
       <h1 className="text-3xl md:text-5xl pt-2 pb-6">I'm <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#f15a24] via-orange to-purple">Perfect Nkosi</span></h1>
       <div className="flex ">
