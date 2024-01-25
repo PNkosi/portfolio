@@ -42,7 +42,7 @@ const RecentBlogPosts = () => {
 
       <div className="grid md:grid-cols-3 gap-6">
         {posts.map(({id, img, title, content}) => (
-            <div>
+            <div key={id}>
                 <Image src={img} alt={title} width={375} height={400} />
                 <div className="space-y-4">
                     <h3>{title}</h3>
