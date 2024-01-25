@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dark-purple: #2F1C6A;
+  --bg-purple: #5025D1;
+  --lime: #91ff00;
+  --light-blue: #8c85ff;
+  --bg-offset-white: #DCDCDC;
+  --light-foreground: #C6CEE9;
+  --dark-foreground: #020617;
+
+}
+
+
+
+@layer base {
+  html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    /* background-color: var(--bg-purple); */
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  h1 {
+    @apply text-5xl font-bold mb-4 tracking-widest
+  }
+
+  h2 {
+    @apply text-4xl font-bold mb-4 tracking-widest
+  }
+
+  h3 {
+    @apply text-3xl font-bold
+  }
+
+  h4 {
+    @apply text-2xl font-semibold
+  }
+
+
+  @keyframes bounce {
+
+    0%,
+    100% {
+      transform: translateY(-2%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+
+  .bounce {
+    animation: bounce 1s infinite;
+  }
+}
+
+
+@layer components {
+  .container {
+    @apply max-w-5xl
+  }
+}
