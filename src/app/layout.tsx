@@ -23,7 +23,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-        <meta name="google-adsense-account" content="ca-pub-3451785322840347">
       </head>
       <body className={inter.className} id='home'>
         <Navbar />
